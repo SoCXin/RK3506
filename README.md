@@ -1,30 +1,35 @@
-﻿# [RK3308](https://github.com/sochub/RK3308)
+﻿# [RK3506](https://github.com/SoCXin/RK3506)
 
-[![sites](http://182.61.61.133//resources/SoC.png)](http://www.qitas.cn) 
+* [rock-chips](https://www.rock-chips.com/)：[Cortex-A7 + Cortex-M0](https://github.com/SoCXin/Cortex)
+* [L5R5](https://github.com/SoCXin/Level): 1.5GHz/200MHz 
 
-#### [Vendor](https://github.com/sochub/Vendor)：[rock-chips](https://github.com/sochub/rockchips)
-#### [MIPS](https://github.com/sochub/MIPS)：[cortex A35](https://github.com/sochub/CA35)
-#### [Level](https://github.com/sochub/Level)：
+## [简介](https://github.com/SoCXin/RK3506/wiki)
 
-瑞芯微4核 A35 with 1.3GHz，主打语音，高度定制裁剪低成本方案
+[RK3506B](https://www.scensmart.com/general-description-of-soc/rockchip-rk3506/)是瑞芯微Rockchip在2024年第四季度全新推出的Arm嵌入式芯片平台，三核Cortex-A7+单核Cortex-M0多核异构设计，CPU频率达1.5Ghz, M0 MCU为200Mhz。
 
-主要特点：5xUART、24 bit DAC、24 bit ADC
+基于 22nm 先进制程工艺，集成了三核 ARM Cortex-A7 加单核 Cortex-M0，主频高达 1.5GHz。支持 AMP 多核异构架构，一颗芯片可支持 Linux、RTOS、Bare-metal 灵活组合搭配，如 2×Cortex-A7 Linux + 1×Cortex-A7 RTOS + Cortex-M0 HAL 或 3×Cortex-A7 RTOS + Cortex-M0 HAL 等组合，采用标准 RPMsg 核间通信机制。
 
-功能特点：Voice Activity Detection(VAD)
+SDK 原生支持 LVGL 轻量级 UI 框架，并结合芯片内部 2D 硬件加速，让 LVGL 运行更加流畅，从硬件上电到引导程序加载及内核加载，最后到 UI 显示，全链路启动优化。
 
-主要短板：只支持16bit DDR3 1066MHz，无图像输入输出
+``` mermaid
+gantt
+    title RK3506 EVT
+    dateFormat  YYYY-MM-DD
+    section Mainline Release
+    v1.0           :a1, 2024-04-05, 2025-04-05
+    v1.1           :a2, 2025-04-05, 2025-12-30
+```
 
-封装： TFBGA355 (13mm x 13mm; ball: 0.3mm/pitch 0.65mm)
+## [资源收录](https://github.com/SoCXin)
 
-### [资源收录](https://github.com/sochub/RK3308)
+* [参考资源](src/)
+* [参考文档](docs/)
+* [参考工程](project/)
 
-* [文档](docs/) 
-* [linux系统](linux/)
+## [选型建议](https://github.com/SoCXin)
 
+### 开发板
 
-### [选型建议](https://github.com/sochub/RK3308)
+#### Luckfox Lyra
 
-[RK3308](https://github.com/sochub/RK3308)是高性价比4核应用处理器，十分适用于成本敏感计算密度型硬件产品。
-
-###  [SoC资源平台](http://www.qitas.cn)   
-
+Luckfox Lyra 支持 Buildroot 和 Ubuntu22.04 系统
